@@ -2,7 +2,7 @@
 ニコニコ動画を左右反転させるブックマークレット  
 
 ```js
-javascript:(function(n){if (!n) {return;}n.style.transform=(n.style.transform.toLowerCase()==='scalex(-1)')?'':'scaleX(-1)';})(function(){const nico = document.querySelector('video');if (nico) {return nico;}return null;}());
+javascript:(function(videos){videos.forEach(video => video.style.transform=(video.style.transform.toLowerCase()==='scalex(-1)')?'':'scaleX(-1)');})(function(){const videos = document.querySelectorAll('video');return videos;}());
 ```
 
 ~~現在ニコニコ動画のみで動作します。  
