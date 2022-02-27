@@ -1,17 +1,11 @@
 javascript:(
-    function(n){
-        if (!n) {
-            return;
-        }
-        n.style.transform=(n.style.transform.toLowerCase()==='scalex(-1)')?'':'scaleX(-1)';
+    function(videos){
+        videos.forEach(video => video.style.transform=(video.style.transform.toLowerCase()==='scalex(-1)')?'':'scaleX(-1)');
     }
 )
 (
     function(){
-        const nico = document.querySelector('video');
-        if (nico) {
-            return nico;
-        }
-        return null;
+        const videos = document.querySelectorAll('video');
+        return videos;
     }()
 );
